@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="فروشگاه عطر و ادکلن لوکس؛ انتخاب رایحه‌ای ماندگار برای هر سلیقه">
+  <title>عطریوم | فروشگاه عطر و ادکلن</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
+    :root{--ink:#201a18;--muted:#776d67;--cream:#f8f4ef;--gold:#b58a50;--gold2:#e2c18c;--white:#fff;--line:#e8ded3}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:'Vazirmatn',Tahoma,sans-serif;background:var(--cream);color:var(--ink)}
+    a{color:inherit;text-decoration:none} button,input,select{font:inherit} button{cursor:pointer}
+    .topline{background:#211a17;color:#f7ead8;text-align:center;padding:9px 16px;font-size:12px;letter-spacing:.2px}
+    header{position:sticky;top:0;z-index:20;background:#fffdfaf2;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{max-width:1180px;margin:auto;padding:15px 22px;display:flex;align-items:center;gap:28px}
+    .brand{font-size:25px;font-weight:800;white-space:nowrap;letter-spacing:-1px}.brand span{color:var(--gold)}
+    .navlinks{display:flex;gap:23px;margin-inline-start:auto;font-size:13px;color:#5f5550}.navlinks a:hover{color:var(--gold)}
+    .navactions{display:flex;gap:9px;align-items:center}.iconbtn{border:1px solid var(--line);background:white;border-radius:50%;width:40px;height:40px;display:grid;place-items:center;font-size:17px;position:relative}
+    .count{position:absolute;top:-4px;left:-4px;background:var(--gold);color:white;border-radius:50%;font-size:10px;min-width:17px;height:17px;display:grid;place-items:center}
+    .hero{max-width:1180px;margin:28px auto 0;padding:0 22px}.hero-inner{min-height:480px;border-radius:8px;overflow:hidden;position:relative;background:linear-gradient(90deg,rgba(23,17,15,.83),rgba(23,17,15,.25)),url('https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1800&q=85') center 45%/cover;display:flex;align-items:center;color:white}
+    .hero-copy{max-width:570px;padding:64px 7%;position:relative}.eyebrow{color:var(--gold2);font-size:12px;letter-spacing:2px;font-weight:700}.hero h1{font-size:clamp(34px,5vw,58px);line-height:1.45;margin:16px 0;font-weight:800}.hero p{color:#f1e8e1;line-height:2;font-size:15px;max-width:450px}.btn{border:0;background:var(--gold);color:white;padding:13px 23px;border-radius:3px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:.2s}.btn:hover{background:#96703d;transform:translateY(-1px)}.btn.outline{background:transparent;border:1px solid #ffffff8a;margin-inline-start:8px}.btn.outline:hover{background:#ffffff18}
+    .trust{max-width:1136px;margin:20px auto 0;padding:0 22px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.trust-item{display:flex;align-items:center;gap:12px;padding:17px;background:white;border:1px solid var(--line);border-radius:5px}.trust-icon{font-size:22px;color:var(--gold)}.trust strong{display:block;font-size:12px}.trust small{color:var(--muted);font-size:10px}
+    section.content{max-width:1180px;margin:76px auto;padding:0 22px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin-bottom:25px}.section-head h2{margin:5px 0;font-size:29px}.section-head p{margin:0;color:var(--muted);font-size:13px}.kicker{color:var(--gold);font-weight:700;font-size:11px;letter-spacing:1px}
+    .order-top{white-space:nowrap;align-self:center;margin-inline-start:auto}
+    .categories{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.category{height:220px;border-radius:5px;overflow:hidden;position:relative;color:white;background:#302722}.category img{width:100%;height:100%;object-fit:cover;transition:transform .5s;filter:brightness(.75)}.category:hover img{transform:scale(1.06)}.category span{position:absolute;bottom:18px;right:20px;font-size:20px;font-weight:700}.category small{display:block;font-size:11px;color:#eee0d1;font-weight:400}
+    .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:22px}.search{flex:1;min-width:190px;position:relative}.search input{width:100%;padding:12px 15px;border:1px solid var(--line);background:white;border-radius:4px;outline:none}.search input:focus{border-color:var(--gold)}.toolbar select{padding:12px;border:1px solid var(--line);background:white;border-radius:4px;color:#514740}
+    .products{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}.product{background:white;border:1px solid var(--line);border-radius:5px;overflow:hidden;transition:.25s}.product:hover{transform:translateY(-4px);box-shadow:0 14px 30px #3c26100c}.product-img{height:235px;background:#eee5da;position:relative;overflow:hidden}.product-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}.product:hover .product-img img{transform:scale(1.04)}.tag{position:absolute;top:12px;right:12px;background:#fffaf1;padding:5px 9px;font-size:10px;color:#7c5a2e}.heart{position:absolute;left:12px;top:12px;border:0;border-radius:50%;background:#fffdf0ed;width:33px;height:33px;font-size:18px;color:#6c5c51}.product-info{padding:15px}.product-brand{font-size:10px;color:var(--gold);font-weight:700}.product h3{font-size:15px;margin:5px 0 7px}.notes{color:var(--muted);font-size:11px;min-height:20px}.price-row{display:flex;justify-content:space-between;align-items:center;margin-top:13px;gap:8px}.price{font-size:14px;font-weight:800}.price del{font-size:10px;color:#9c9188;font-weight:400;margin-inline-start:5px}.add{border:0;background:#251d19;color:white;width:35px;height:35px;border-radius:3px;font-size:20px}.add:hover{background:var(--gold)}.empty{grid-column:1/-1;text-align:center;padding:45px;background:white;color:var(--muted)}
+    .banner{max-width:1136px;margin:0 auto;padding:0 22px}.banner-inner{background:#29201b;color:white;display:grid;grid-template-columns:1.2fr 1fr;min-height:270px;overflow:hidden;border-radius:5px}.banner-copy{padding:40px}.banner-copy h2{font-size:29px;margin:10px 0}.banner-copy p{color:#d4c5b7;line-height:2;font-size:13px}.banner-img{background:url('https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=1000&q=80') center/cover;min-height:250px}
+    .newsletter{max-width:1180px;margin:76px auto;padding:0 22px}.newsletter-inner{background:#eee4d8;text-align:center;padding:43px 20px;border-radius:5px}.newsletter h2{margin:0 0 8px;font-size:25px}.newsletter p{color:var(--muted);font-size:13px}.newsform{display:flex;max-width:460px;margin:20px auto 0;gap:8px}.newsform input{flex:1;min-width:0;border:1px solid #d7c7b5;padding:12px;background:#fff;border-radius:3px;direction:rtl}
+    footer{background:#211a17;color:#f5eee7;padding:45px 22px 20px}.footer-inner{max-width:1136px;margin:auto;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:30px}.footer-inner p,.footer-inner a{color:#c9bdb3;font-size:12px;line-height:2.2}.footer-inner h4{margin:0 0 12px}.footer-inner a{display:block}.footer-inner a:hover{color:var(--gold2)}.copyright{max-width:1136px;margin:28px auto 0;border-top:1px solid #493c34;padding-top:17px;color:#a99a8e;font-size:11px;display:flex;justify-content:space-between;gap:10px}
+    .toast{position:fixed;bottom:22px;left:22px;background:#261e19;color:white;padding:13px 19px;border-radius:4px;box-shadow:0 8px 30px #0002;z-index:50;opacity:0;transform:translateY(10px);pointer-events:none;transition:.25s;font-size:13px}.toast.show{opacity:1;transform:translateY(0)}
+    .cart-panel{position:fixed;inset:0;z-index:40;background:#160f0d80;display:none;justify-content:flex-start}.cart-panel.open{display:flex}.cart{width:min(420px,100%);height:100%;background:#fffaf5;padding:24px;overflow:auto;box-shadow:0 0 40px #0002}.cart-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:15px}.cart-head h3{margin:0}.close{border:0;background:none;font-size:26px}.cart-items{padding:10px 0}.cart-line{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding:14px 0;font-size:13px}.cart-line button{border:0;background:none;color:#a44}.cart-total{display:flex;justify-content:space-between;font-weight:800;margin:18px 0}.checkout{width:100%}
+    @media(max-width:850px){.nav{gap:12px}.navlinks{gap:12px}.products{grid-template-columns:repeat(2,minmax(0,1fr))}.product-img{height:250px}.categories{grid-template-columns:repeat(2,1fr)}.trust{grid-template-columns:repeat(2,1fr)}.footer-inner{grid-template-columns:repeat(2,1fr)}.hero-inner{min-height:420px}.banner-inner{grid-template-columns:1fr 1fr}}
+    @media(max-width:560px){.topline{font-size:10px}.nav{padding:12px 16px;flex-wrap:wrap}.brand{font-size:22px}.navlinks{order:3;width:100%;overflow:auto;justify-content:space-between;gap:15px;padding-top:7px}.navlinks a{white-space:nowrap;font-size:12px}.navactions{margin-inline-start:auto}.hero{padding:0 12px;margin-top:12px}.hero-inner{min-height:420px;background-position:58% center}.hero-copy{padding:35px 23px}.hero h1{font-size:34px}.hero p{font-size:13px}.btn{padding:11px 15px;font-size:12px}.trust{padding:0 12px;gap:8px}.trust-item{padding:12px 9px;gap:8px}.trust strong{font-size:11px}.trust small{font-size:9px}section.content{padding:0 12px;margin:55px auto}.section-head h2{font-size:23px}.section-head{align-items:center}.order-top{padding:10px 13px;font-size:12px}.categories{gap:9px}.category{height:170px}.category span{font-size:16px;right:12px;bottom:12px}.products{gap:10px}.product-img{height:190px}.product-info{padding:11px}.product h3{font-size:13px}.price{font-size:12px}.notes{font-size:10px}.toolbar select{flex:1}.banner{padding:0 12px}.banner-inner{grid-template-columns:1fr}.banner-copy{padding:28px 22px}.banner-img{min-height:180px;order:-1}.newsletter{padding:0 12px;margin:55px auto}.newsform{flex-direction:column}.footer-inner{grid-template-columns:1fr 1fr;gap:25px 18px}.copyright{flex-direction:column}.iconbtn{width:36px;height:36px}}
+  </style>
+</head>
+<body>
+  <div class="topline">رایحه‌ای که از شما به یاد می‌ماند ✦ ارسال رایگان برای سفارش‌های بالای ۲ میلیون تومان</div>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="#">عطر<span>یوم</span></a>
+      <div class="navlinks">
+        <a href="#home">خانه</a><a href="#categories">دسته‌بندی‌ها</a><a href="#products">محصولات</a><a href="#about">درباره ما</a>
+      </div>
+      <div class="navactions">
+        <button class="iconbtn" id="searchFocus" aria-label="جستجو">⌕</button>
+        <button class="iconbtn" id="cartOpen" aria-label="سبد خرید">♧<span class="count" id="cartCount">0</span></button>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <div class="eyebrow">THE ART OF FRAGRANCE</div>
+          <h1>رایحه‌ای خاص،<br>امضای همیشگی شما</h1>
+          <p>دنیایی از عطرها و ادکلن‌های منتخب؛ از رایحه‌های لطیف و روزمره تا عطرهای عمیق و ماندگار برای لحظه‌های فراموش‌نشدنی.</p>
+          <a class="btn" href="#products">کشف رایحه‌ها <span>←</span></a>
+          <a class="btn outline" href="#about">داستان عطریوم</a>
+        </div>
+      </div>
+    </section>
+    <div class="trust">
+      <div class="trust-item"><span class="trust-icon">✧</span><div><strong>تضمین اصالت کالا</strong><small>با خیال آسوده انتخاب کنید</small></div></div>
+      <div class="trust-item"><span class="trust-icon">♧</span><div><strong>بسته‌بندی شیک</strong><small>مناسب هدیه دادن</small></div></div>
+      <div class="trust-item"><span class="trust-icon">↗</span><div><strong>ارسال سریع</strong><small>پیگیری آسان سفارش</small></div></div>
+      <div class="trust-item"><span class="trust-icon">♡</span><div><strong>مشاوره انتخاب عطر</strong><small>رایحه مناسب سلیقه شما</small></div></div>
+    </div>
+    <section class="content" id="categories">
+      <div class="section-head"><div><div class="kicker">EXPLORE COLLECTIONS</div><h2>دسته‌بندی رایحه‌ها</h2><p>برای هر حال‌وهوا، عطری در انتظار شماست.</p></div></div>
+      <div class="categories">
+        <a href="#products" class="category" data-category="زنانه"><img loading="lazy" src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=700&q=80" alt="عطر زنانه"><span>عطرهای زنانه<small>لطیف، دلنشین، ماندگار</small></span></a>
+        <a href="#products" class="category" data-category="مردانه"><img loading="lazy" src="https://images.unsplash.com/photo-1590736969955-71cc94901144?auto=format&fit=crop&w=700&q=80" alt="عطر مردانه"><span>عطرهای مردانه<small>باوقار و متمایز</small></span></a>
+        <a href="#products" class="category" data-category="یونیسکس"><img loading="lazy" src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=700&q=80" alt="عطر یونیسکس"><span>یونیسکس<small>فراتر از مرزها</small></span></a>
+        <a href="#products" class="category" data-category="هدیه"><img loading="lazy" src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=700&q=80" alt="ست هدیه عطر"><span>ست‌های هدیه<small>برای لحظه‌های خاص</small></span></a>
+      </div>
+    </section>
+    <section class="content" id="products">
+      <div class="section-head"><div><div class="kicker">THE SIGNATURE EDIT</div><h2>محبوب‌ترین عطرها</h2><p>منتخب‌هایی برای ساختن امضای بویایی شما.</p></div><button class="btn order-top" id="orderTopBtn" type="button">ثبت سفارش ←</button></div>
+      <div class="toolbar">
+        <div class="search"><input id="searchInput" type="search" placeholder="نام عطر یا رایحه موردنظرت را بنویس..." aria-label="جستجوی محصولات"></div>
+        <select id="categoryFilter" aria-label="فیلتر دسته‌بندی"><option value="همه">همه دسته‌ها</option><option>زنانه</option><option>مردانه</option><option>یونیسکس</option><option>هدیه</option></select>
+        <select id="sortFilter" aria-label="مرتب‌سازی"><option value="featured">پیشنهادی</option><option value="low">ارزان‌ترین</option><option value="high">گران‌ترین</option></select>
+      </div>
+      <div class="products" id="productGrid"></div>
+    </section>
+    <section class="banner" id="about">
+      <div class="banner-inner">
+        <div class="banner-copy"><div class="kicker">A SCENT FOR EVERY STORY</div><h2>عطر، فراتر از یک رایحه</h2><p>ما باور داریم هر رایحه می‌تواند خاطره‌ای بسازد. در عطریوم، مجموعه‌ای از عطرهای الهام‌بخش را کنار هم آورده‌ایم تا انتخاب رایحه بعدی‌تان، تجربه‌ای دلنشین و شخصی باشد.</p><a class="btn" href="#products">رایحه خودت را پیدا کن ←</a></div>
+        <div class="banner-img" role="img" aria-label="شیشه عطر لوکس"></div>
+      </div>
+    </section>
+    <section class="newsletter">
+      <div class="newsletter-inner"><div class="kicker">A LITTLE NOTE FROM US</div><h2>عضو دنیای عطریوم شو</h2><p>برای باخبر شدن از محصولات جدید و پیشنهادهای ویژه، ایمیلت را وارد کن.</p>
+        <form class="newsform" id="newsletterForm"><input type="email" required placeholder="آدرس ایمیل شما" aria-label="آدرس ایمیل"><button class="btn" type="submit">عضویت در خبرنامه</button></form>
+      </div>
+    </section>
+  </main>
+  <footer id="contact">
+    <div class="footer-inner">
+      <div><a class="brand" href="#">عطر<span>یوم</span></a><p>جایی برای کشف رایحه‌های خاص و انتخاب عطری که داستان شما را روایت می‌کند.</p></div>
+      <div><h4>دسترسی سریع</h4><a href="#home">صفحه اصلی</a><a href="#products">فروشگاه عطر</a><a href="#categories">دسته‌بندی‌ها</a></div>
+      <div><h4>راهنمای خرید</h4><a href="#contact">روش‌های ارسال</a><a href="#contact">شرایط بازگشت کالا</a><a href="#contact">پرسش‌های متداول</a></div>
+
+    </div>
+    <div class="copyright"><span>© عطریوم — تمامی حقوق محفوظ است.</span><span>با عشق به دنیای رایحه‌ها ساخته شده است.</span></div>
+  </footer>
+  <div class="toast" id="toast" role="status"></div>
+  <div class="cart-panel" id="cartPanel" aria-hidden="true">
+    <div class="cart">
+      <div class="cart-head"><h3>سبد خرید شما</h3><button class="close" id="cartClose" aria-label="بستن">×</button></div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-total"><span>مجموع</span><span id="cartTotal">۰ تومان</span></div>
+      <button class="btn checkout" id="checkoutBtn">ادامه ثبت سفارش</button>
+      <p style="font-size:11px;color:#897d73;line-height:1.9">این نسخه نمایشی است؛ برای پرداخت واقعی باید درگاه پرداخت و بک‌اند فروشگاه متصل شود.</p>
+    </div>
+  </div>
+  <script>
+    const products = [
+      {id:1,name:'ساواج',brand:'DIOR',category:'مردانه',notes:'ترنج، فلفل، چوب آمبروکسان',price:6850000,old:7400000,tag:'پرفروش',img:'https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=700&q=80'},
+      {id:2,name:'بلک اوپیوم',brand:'YVES SAINT LAURENT',category:'زنانه',notes:'قهوه، وانیل، شکوفه پرتقال',price:7290000,old:null,tag:'محبوب',img:'https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=700&q=80'},
+      {id:3,name:'بلو د شنل',brand:'CHANEL',category:'مردانه',notes:'مرکبات، بخور، چوب صندل',price:8150000,old:null,tag:'کلاسیک',img:'https://images.unsplash.com/photo-1590736969955-71cc94901144?auto=format&fit=crop&w=700&q=80'},
+      {id:4,name:'باکارات رژ',brand:'MAISON FRANCIS KURKDJIAN',category:'یونیسکس',notes:'زعفران، یاس، عنبر چوبی',price:9900000,old:10500000,tag:'خاص',img:'https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=700&q=80'},
+      {id:5,name:'لایت بلو',brand:'DOLCE & GABBANA',category:'زنانه',notes:'لیمو سیسیلی، سیب، سدر',price:4980000,old:null,tag:'روزانه',img:'https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&w=700&q=80'},
+      {id:6,name:'ترا د هرمس',brand:'HERMÈS',category:'مردانه',notes:'پرتقال، سنگ آتش‌زنه، خس‌خس',price:7600000,old:null,tag:'شیک',img:'https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=700&q=80'},
+      {id:7,name:'مولکول ۰۱',brand:'ES CENTRIC MOLECULES',category:'یونیسکس',notes:'ایزو ای سوپر، چوبی و مینیمال',price:6250000,old:null,tag:'مینیمال',img:'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=700&q=80'},
+      {id:8,name:'ست هدیه رایحه',brand:'ATRIUM SELECTION',category:'هدیه',notes:'بسته‌بندی ویژه برای هدیه',price:3850000,old:null,tag:'هدیه',img:'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=700&q=80'}
+    ];
+    const fmt = n => new Intl.NumberFormat('fa-IR').format(n) + ' تومان';
+    const grid = document.getElementById('productGrid');
+    const cart = new Map();
+    const favorites = new Set();
+    function renderProducts(){
+      const q = document.getElementById('searchInput').value.trim().toLowerCase();
+      const cat = document.getElementById('categoryFilter').value;
+      const sort = document.getElementById('sortFilter').value;
+      let list = products.filter(p => (cat==='همه'||p.category===cat) && [p.name,p.brand,p.notes,p.category].join(' ').toLowerCase().includes(q));
+      if(sort==='low') list.sort((a,b)=>a.price-b.price);
+      if(sort==='high') list.sort((a,b)=>b.price-a.price);
+      grid.innerHTML = list.length ? list.map(p=>`
+        <article class="product">
+          <div class="product-img"><img loading="lazy" src="${p.img}" alt="عطر ${p.name}"><span class="tag">${p.tag}</span>
+            <button class="heart" data-fav="${p.id}" aria-label="افزودن به علاقه‌مندی‌ها">${favorites.has(p.id)?'♥':'♡'}</button></div>
+          <div class="product-info"><div class="product-brand">${p.brand}</div><h3>${p.name}</h3><div class="notes">${p.notes}</div>
+            <div class="price-row"><div class="price">${fmt(p.price)} ${p.old?`<del>${fmt(p.old)}</del>`:''}</div><button class="add" data-add="${p.id}" aria-label="افزودن ${p.name} به سبد">+</button></div>
+          </div>
+        </article>`).join('') : '<div class="empty">محصولی با این مشخصات پیدا نشد.</div>';
+    }
+    function notify(message){const t=document.getElementById('toast');t.textContent=message;t.classList.add('show');clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>t.classList.remove('show'),2500)}
+    function renderCart(){
+      let count=0,total=0;
+      const entries=[...cart.entries()];
+      document.getElementById('cartItems').innerHTML=entries.length?entries.map(([id,qty])=>{const p=products.find(x=>x.id===id);count+=qty;total+=p.price*qty;return `<div class="cart-line"><div><strong>${p.name}</strong><br><small>${fmt(p.price)} × ${qty}</small></div><div><strong>${fmt(p.price*qty)}</strong><br><button data-remove="${id}">حذف</button></div></div>`}).join(''):'<p style="color:#897d73;text-align:center;padding:30px 0">سبد خرید شما هنوز خالی است.</p>';
+      document.getElementById('cartCount').textContent=new Intl.NumberFormat('fa-IR').format(count);
+      document.getElementById('cartTotal').textContent=fmt(total);
+    }
+    grid.addEventListener('click',e=>{
+      const add=e.target.closest('[data-add]');const fav=e.target.closest('[data-fav]');
+      if(add){const id=Number(add.dataset.add);cart.set(id,(cart.get(id)||0)+1);renderCart();notify('محصول به سبد خرید اضافه شد.')}
+      if(fav){const id=Number(fav.dataset.fav);favorites.has(id)?favorites.delete(id):favorites.add(id);renderProducts();notify(favorites.has(id)?'به علاقه‌مندی‌ها اضافه شد.':'از علاقه‌مندی‌ها حذف شد.')}
+    });
+    document.getElementById('cartItems').addEventListener('click',e=>{const b=e.target.closest('[data-remove]');if(b){cart.delete(Number(b.dataset.remove));renderCart()}});
+    ['searchInput','categoryFilter','sortFilter'].forEach(id=>document.getElementById(id).addEventListener(id==='searchInput'?'input':'change',renderProducts));
+    document.querySelectorAll('.category').forEach(el=>el.addEventListener('click',()=>{document.getElementById('categoryFilter').value=el.dataset.category;renderProducts()}));
+    document.getElementById('searchFocus').addEventListener('click',()=>{document.getElementById('products').scrollIntoView({behavior:'smooth'});setTimeout(()=>document.getElementById('searchInput').focus(),400)});
+    const panel=document.getElementById('cartPanel');
+    function openCart(){panel.classList.add('open');panel.setAttribute('aria-hidden','false')}
+    function closeCart(){panel.classList.remove('open');panel.setAttribute('aria-hidden','true')}
+    document.getElementById('cartOpen').addEventListener('click',openCart);
+    document.getElementById('cartClose').addEventListener('click',closeCart);
+    panel.addEventListener('click',e=>{if(e.target===panel)closeCart()});
+    function goToCheckout(){
+      localStorage.setItem('atriumCart', JSON.stringify([...cart.entries()]));
+      window.location.href='atrium_checkout.html';
+    }
+    document.getElementById('checkoutBtn').addEventListener('click',goToCheckout);
+    document.getElementById('orderTopBtn').addEventListener('click',goToCheckout);
+    document.getElementById('newsletterForm').addEventListener('submit',e=>{e.preventDefault();notify('ممنون از عضویت شما! (نسخه نمایشی)');e.target.reset()});
+    renderProducts();renderCart();
+  </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>عطریوم | ثبت سفارش</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
+:root{--ink:#261e19;--muted:#786d64;--cream:#f8f4ef;--gold:#b58a50;--line:#e8ded3;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Vazirmatn,Tahoma,sans-serif;background:var(--cream);color:var(--ink)}button,input,textarea{font:inherit}button,a{cursor:pointer}a{color:inherit;text-decoration:none}
+header{background:#211a17;color:#fff;padding:16px max(22px,calc((100% - 1120px)/2));display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}.logo{font-size:27px;font-weight:800}.logo span{color:#c6a16b}nav{display:flex;gap:20px;font-size:13px}nav a:hover{color:#c6a16b}
+.hero{background:linear-gradient(90deg,#17110de8,#17110d88),url('https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1600&q=80') center 48%/cover;color:white;padding:65px 22px}.hero-inner{max-width:1120px;margin:auto}.hero h1{font-size:clamp(30px,4vw,46px);margin:0 0 12px}.hero p{color:#eee1d5;line-height:2;margin:0}
+main{max-width:1120px;margin:38px auto 75px;padding:0 22px}.section-title{margin:0 0 7px;font-size:25px}.muted{color:var(--muted);font-size:13px;line-height:1.9}.layout{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;margin-top:24px;align-items:start}.panel{background:#fff;border:1px solid var(--line);border-radius:8px;padding:25px;box-shadow:0 10px 30px #39210b08}.panel h2{font-size:18px;margin:0 0 20px}.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}.field{display:flex;flex-direction:column;gap:8px}.field.full{grid-column:1/-1}.field label{font-size:13px;font-weight:600}.field input,.field textarea{width:100%;border:1px solid #ded3c8;border-radius:5px;padding:13px 12px;background:#fffdfa;outline:none;transition:.2s}.field input:focus,.field textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px #b58a501c}.field textarea{resize:vertical;min-height:105px}.required{color:#b44}.btn{border:0;border-radius:5px;background:var(--gold);color:white;padding:13px 20px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:8px}.btn:hover{background:#936d3a}.btn:disabled{opacity:.45;cursor:not-allowed}.btn.dark{background:#261e19}.btn.dark:hover{background:#453329}.btn.secondary{background:#f2e8dc;color:#4b3929}.btn.secondary:hover{background:#e9d9c6}.form-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.form-actions .btn{flex:1}
+.order-row{display:grid;grid-template-columns:58px 1fr auto;gap:12px;align-items:center;padding:14px 0;border-bottom:1px solid #eee6de}.thumb{height:58px;width:58px;object-fit:cover;border-radius:5px;background:#eee5da}.item-name{font-weight:700;font-size:13px}.item-brand{color:var(--muted);font-size:10px;margin-top:4px}.item-price{font-size:12px;font-weight:700;white-space:nowrap}.quantity{display:flex;align-items:center;gap:9px;margin-top:9px}.quantity button{width:25px;height:25px;border:1px solid var(--line);background:#fffaf4;border-radius:4px}.quantity span{font-size:12px}.remove{border:0;background:none;color:#a24b40;font-size:11px;margin-top:6px;padding:0}.summary{margin-top:18px}.sumline{display:flex;justify-content:space-between;gap:12px;padding:10px 0;color:#675a50;font-size:13px}.sumline.total{border-top:1px solid var(--line);margin-top:6px;padding-top:17px;font-weight:800;font-size:17px;color:var(--ink)}.empty{text-align:center;padding:30px 10px;color:var(--muted);line-height:2}.empty .emoji{font-size:34px;display:block;margin-bottom:10px}.notice{background:#f7f0e7;border:1px solid #eadbc7;border-radius:5px;padding:12px;font-size:11px;line-height:1.9;color:#76624b;margin-top:15px}.success{display:none;text-align:center;padding:28px 15px}.success.show{display:block}.success .check{margin:auto auto 15px;width:54px;height:54px;border-radius:50%;background:#e4f2e7;color:#2c7740;display:grid;place-items:center;font-size:28px}.success h2{font-size:24px}.success p{line-height:2;color:var(--muted)}footer{background:#211a17;color:#c9bdb3;text-align:center;padding:28px 20px;font-size:12px;line-height:2}footer strong{color:#c6a16b}.toast{position:fixed;bottom:20px;left:20px;background:#261e19;color:white;padding:13px 18px;border-radius:5px;opacity:0;transform:translateY(8px);transition:.2s;pointer-events:none;z-index:10}.toast.show{opacity:1;transform:translateY(0)}
+@media(max-width:760px){.layout{grid-template-columns:1fr}.panel{padding:20px}.hero{padding:48px 22px}main{margin-top:28px}.layout .order-panel{order:-1}}
+@media(max-width:480px){header{padding:14px 17px}.logo{font-size:23px}nav{width:100%;justify-content:space-between;gap:10px;font-size:12px}.field-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.field input,.field textarea{font-size:14px}.order-row{grid-template-columns:48px 1fr auto;gap:9px}.thumb{width:48px;height:48px}.item-price{font-size:11px}.form-actions{flex-direction:column}}
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="atrium_perfume_store.html">عطر<span>یوم</span></a>
+  <nav><a href="atrium_perfume_store.html">صفحه اصلی</a><a href="atrium_perfume_store.html#products">محصولات</a><a href="#checkout">ثبت سفارش</a></nav>
+</header>
+<section class="hero"><div class="hero-inner"><h1>ثبت سفارش شما</h1><p>رایحه دلخواهت رو انتخاب کردی؛ فقط چند قدم تا نهایی شدن سفارش باقی مونده.</p></div></section>
+<main id="checkout">
+  <h2 class="section-title">تکمیل اطلاعات سفارش</h2>
+  <p class="muted">لطفاً اطلاعات تماس و آدرس تحویل را وارد کنید.</p>
+  <div id="checkoutLayout" class="layout">
+    <section class="panel">
+      <div id="formSection">
+        <h2>اطلاعات مشتری</h2>
+        <form id="orderForm">
+          <div class="field-grid">
+            <div class="field"><label for="firstName">نام <span class="required">*</span></label><input id="firstName" name="firstName" autocomplete="given-name" required placeholder="نام شما"></div>
+            <div class="field"><label for="lastName">نام خانوادگی <span class="required">*</span></label><input id="lastName" name="lastName" autocomplete="family-name" required placeholder="نام خانوادگی شما"></div>
+            <div class="field"><label for="phone">شماره تماس <span class="required">*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" required inputmode="tel" pattern="[0-9۰-۹+() -]{7,20}" placeholder="مثلاً 09123456789"></div>
+            <div class="field"><label for="email">ایمیل <span class="required">*</span></label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div>
+            <div class="field full"><label for="address">آدرس کامل <span class="required">*</span></label><textarea id="address" name="address" autocomplete="street-address" required placeholder="استان، شهر، خیابان، کوچه، پلاک و واحد"></textarea></div>
+          </div>
+          <div class="notice">با ثبت سفارش، اطلاعات واردشده برای پیگیری سفارش استفاده می‌شود. در این نمونه، سفارش فقط در همین صفحه شبیه‌سازی می‌شود و به فروشنده ارسال نمی‌شود.</div>
+          <div class="form-actions"><button class="btn" type="submit">ثبت سفارش نهایی</button><a class="btn secondary" href="atrium_perfume_store.html#products">ادامه خرید</a></div>
+        </form>
+      </div>
+      <div class="success" id="successSection" role="status">
+        <div class="check">✓</div><h2>سفارش شما ثبت شد!</h2>
+        <p id="successText">ممنون از خرید شما.</p>
+        <button class="btn dark" onclick="window.print()">چاپ رسید سفارش</button>
+        <a class="btn secondary" href="atrium_perfume_store.html">بازگشت به فروشگاه</a>
+      </div>
+    </section>
+    <aside class="panel order-panel">
+      <h2>خلاصه سفارش</h2>
+      <div id="orderItems"></div>
+      <div class="summary">
+        <div class="sumline"><span>جمع محصولات</span><strong id="subtotal">۰ تومان</strong></div>
+        <div class="sumline"><span>هزینه ارسال</span><strong id="shipping">رایگان</strong></div>
+        <div class="sumline total"><span>مبلغ قابل پرداخت</span><strong id="total">۰ تومان</strong></div>
+      </div>
+      <div class="notice">قیمت‌ها نمونه هستند. پرداخت آنلاین در این نسخه فعال نیست.</div>
+    </aside>
+  </div>
+</main>
+<footer><p><strong>عطریوم</strong> | فروشگاه عطر و ادکلن</p><p>تمامی حقوق محفوظ است © ۲۰۲۶</p></footer>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const products=[
+{id:1,name:"ساواج",brand:"DIOR",price:6850000,image:"https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=300&q=80"},
+{id:2,name:"بلک اوپیوم",brand:"YVES SAINT LAURENT",price:7290000,image:"https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=300&q=80"},
+{id:3,name:"بلو د شنل",brand:"CHANEL",price:8150000,image:"https://images.unsplash.com/photo-1590736969955-71cc94901144?auto=format&fit=crop&w=300&q=80"},
+{id:4,name:"باکارات رژ",brand:"MAISON FRANCIS KURKDJIAN",price:9900000,image:"https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=300&q=80"},
+{id:5,name:"لایت بلو",brand:"DOLCE & GABBANA",price:4980000,image:"https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&w=300&q=80"},
+{id:6,name:"ترا د هرمس",brand:"HERMÈS",price:7600000,image:"https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=300&q=80"},
+{id:7,name:"مولکول ۰۱",brand:"ES CENTRIC MOLECULES",price:6250000,image:"https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=300&q=80"},
+{id:8,name:"ست هدیه رایحه",brand:"ATRIUM SELECTION",price:3850000,image:"https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=300&q=80"}
+];
+const fmt=n=>new Intl.NumberFormat("fa-IR").format(n)+" تومان";
+const cart=new Map();
+try{
+ const saved=JSON.parse(localStorage.getItem("atriumCart")||"[]");
+ saved.forEach(([id,qty])=>{if(products.some(p=>p.id===Number(id))&&Number(qty)>0)cart.set(Number(id),Number(qty))});
+}catch(e){}
+function saveCart(){try{localStorage.setItem("atriumCart",JSON.stringify([...cart]))}catch(e){}}
+function renderOrder(){
+ const host=document.getElementById("orderItems");let subtotal=0;
+ if(!cart.size){
+  host.innerHTML='<div class="empty"><span class="emoji">🛍️</span>سبد سفارش شما خالی است.<br><a class="btn secondary" href="atrium_perfume_store.html#products" style="margin-top:12px">انتخاب محصولات</a></div>';
+ }else{
+  host.innerHTML=[...cart.entries()].map(([id,qty])=>{const p=products.find(x=>x.id===id);if(!p)return "";subtotal+=p.price*qty;return `<div class="order-row"><img class="thumb" src="${p.image}" alt="${p.name}"><div><div class="item-name">${p.name}</div><div class="item-brand">${p.brand}</div><div class="quantity"><button type="button" data-minus="${id}" aria-label="کم کردن تعداد">−</button><span>${new Intl.NumberFormat("fa-IR").format(qty)}</span><button type="button" data-plus="${id}" aria-label="زیاد کردن تعداد">+</button></div><button class="remove" type="button" data-remove="${id}">حذف محصول</button></div><div class="item-price">${fmt(p.price*qty)}</div></div>`}).join("");
+ }
+ document.getElementById("subtotal").textContent=fmt(subtotal);
+ document.getElementById("total").textContent=fmt(subtotal);
+ document.getElementById("shipping").textContent="رایگان";
+ document.querySelector('#orderForm button[type="submit"]').disabled=cart.size===0;
+}
+document.getElementById("orderItems").addEventListener("click",e=>{
+ const b=e.target.closest("button");if(!b)return;
+ if(b.dataset.plus){const id=Number(b.dataset.plus);cart.set(id,(cart.get(id)||0)+1)}
+ if(b.dataset-minus){const id=Number(b.dataset.minus),qty=(cart.get(id)||0)-1;if(qty<=0)cart.delete(id);else cart.set(id,qty)}
+ if(b.dataset.remove)cart.delete(Number(b.dataset.remove));
+ saveCart();renderOrder();
+});
+function notify(s){const el=document.getElementById("toast");el.textContent=s;el.classList.add("show");setTimeout(()=>el.classList.remove("show"),2600)}
+document.getElementById("orderForm").addEventListener("submit",e=>{
+ e.preventDefault();if(!cart.size){notify("ابتدا محصولی به سبد سفارش اضافه کنید.");return}
+ const form=e.currentTarget;if(!form.reportValidity())return;
+ const data=Object.fromEntries(new FormData(form).entries());
+ const orderNumber="AT-"+Date.now().toString().slice(-7);
+ document.getElementById("formSection").style.display="none";
+ document.getElementById("successSection").classList.add("show");
+ document.getElementById("successText").textContent=`${data.firstName} ${data.lastName} عزیز، سفارش نمایشی شما با شماره ${orderNumber} و مبلغ ${document.getElementById("total").textContent} ثبت شد. برای ثبت واقعی و اطلاع‌رسانی به فروشنده، سایت باید به سرور متصل باشد.`;
+ cart.clear();saveCart();renderOrder();
+});
+renderOrder();
+</script>
+</body>
+</html>
